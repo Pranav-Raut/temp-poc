@@ -1,0 +1,39 @@
+<table id="tbl">
+  <thead>
+    <tr class="headRow centre-text">
+      <td colspan="2"></td>
+      <td colspan="4">Storage Details</td>
+      <td colspan="5">Index Details</td>
+    </tr>
+    <tr class="headRow">
+      <td></td>
+      <td>VaultStore Name</td>
+      <td>Archived Name</td>
+      <td>Archived Items</td>
+      <td>Total Size</td>
+      <td>Failed Items</td>
+      <td>Index Name</td>
+      <td>Indexed Items</td>
+      <td>Index Size</td>
+      <td>Missing Items</td>
+      <td>Search</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="bodyRow" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9]">
+      <td *ngIf="number%5 === 0" rowspan="5">+</td>
+      <td *ngIf="number%5 === 0" rowspan="5">
+        {{"VaultStore_" + number}}
+      </td>
+      <td>{{"Archive_" + number}}</td>
+      <td>{{10 + number}}</td>
+      <td>{{20 + number}} MB</td>
+      <td>{{number}}</td>
+      <td>{{"Index_" + number}}</td>
+      <td>{{10 + number}}</td>
+      <td>{{5 + number}} MB</td>
+      <td>{{number}} MB</td>
+      <td class="centre-text">S</td>
+    </tr>
+  </tbody>
+</table>
